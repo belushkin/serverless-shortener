@@ -6,4 +6,4 @@ Refer to [this tutorial](https://console.bluemix.net/docs/tutorials/serverless-a
 
 ## License
 
-See [License.txt](License.txt) for license information.
+See [LICENSE](LICENSE) for license information.
