@@ -4,6 +4,10 @@ The application is a simple URL shortener website where users can post URLs. It 
 
 Basic idea behind this implementation of Url shortener is that it is possible to create such service using FAAS (Function As A Service) approach. I selected Javascript as a main language because I can use it completely for free on the free hosting service from GitHub.
 
+# Where to see the APP:
+
+https://belushkin.github.io/serverless-shortener/
+
 # How to use Url shortener:
 1) Add your url to the service using form on the right side of the page;
 2) After url will be added to the database you will see it rendered on the left side of the page;
