@@ -67,7 +67,9 @@ const guestbook = {
     function moveToLocation(entry) {
       console.log(entry);
       console.log(entry.url);
-        //window.location.assign(url)
+      setTimeout(function(){
+          window.location.assign(entry.url)
+      }, 2000);
     }
 
     // retrieve entry by short hash and if found send browser to the found location
