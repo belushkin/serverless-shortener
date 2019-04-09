@@ -31,6 +31,7 @@ I have added all functions under actions folder, they have written on Javascript
 # Access for checking Actions and Cloudant database:
 
 Login: kozym@getnada.com
+
 Pass: AJ4xmzi62sH2GfW
 
 # URLS:
