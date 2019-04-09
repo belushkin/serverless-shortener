@@ -106,5 +106,6 @@ const guestbook = {
   $(document).ready(function() {
     prepareTemplates();
     loadEntries();
+    searchEntryBinder();
   });
 })();
