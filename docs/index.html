@@ -22,7 +22,7 @@
       <div class="columns">
         <div class="column">
           <h3 class="title is-3">
-            Messages from past visitors
+            Saved URLs
           </h3>
           <div id="entries"></div>
         </div>
@@ -32,21 +32,9 @@
           </h3>
           <form id="addEntry">
             <div class="field">
-              <label class="label">Name</label>
+              <label class="label">Url</label>
               <div class="control">
-                <input class="input" type="text" placeholder="your name" id="name">
-              </div>
-            </div>
-            <div class="field">
-              <label class="label">Email</label>
-              <div class="control">
-                <input class="input" type="text" placeholder="your email" id="email">
-              </div>
-            </div>
-            <div class="field">
-              <label class="label">Comment</label>
-              <div class="control">
-                <textarea class="textarea" placeholder="your comment" id="comment"></textarea>
+                <input class="input" type="text" placeholder="your name" id="url">
               </div>
             </div>
             <div class="control">
@@ -62,16 +50,11 @@
     {{#each entries}}
     <div class="box">
       <article class="media">
-        <div class="media-left">
-          <figure class="image is-64x64">
-            <img src="{{icon}}" alt="No Image">
-          </figure>
-        </div>
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>{{name}}</strong> <small>{{email}}</small>
-              <br> {{comment}}
+              <strong>{{short}}</strong>
+              <small>{{url}}</small>
             </p>
           </div>
         </div>
