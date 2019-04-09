@@ -23,6 +23,22 @@ const guestbook = {
       }),
       dataType: 'json',
     });
+  },
+  search(short) {
+    console.log('Searching', short)
+      return $.ajax({
+          type: 'GET',
+          url: `${apiUrl}/search`,
+          contentType: 'application/json; charset=utf-8',
+          data: JSON.stringify({
+              "query": {
+                  "selector": {
+                      "short": short
+                  }
+              }
+          }),
+          dataType: 'json',
+      });
   }
 };
 
@@ -53,7 +69,26 @@ const guestbook = {
     });
   }
 
-  // intercept the click on the submit button, add the guestbook entry and
+    // move browser to found location
+    function moveToLocation(url) {
+        window.location.assign(url)
+    }
+
+    // retrieve entry by short hash and if found send browser to the found location
+    function searchEntryBinder() {
+        $(document).on('click', '.short', function(e) {
+            e.preventDefault();
+            guestbook.search(
+                $(this).attr('href').trim()
+            ).done(function(result) {
+                moveToLocation(result.url);
+            }).error(function(error) {
+                console.log(error);
+            });
+        });
+    }
+
+   // intercept the click on the submit button, add the guestbook entry and
   // reload entries on success
   $(document).on('submit', '#addEntry', function(e) {
     e.preventDefault();
