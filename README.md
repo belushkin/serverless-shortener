@@ -28,13 +28,14 @@ I did not test this APP under high load but I assume that in such implementation
 # Functions:
 I have added all functions under actions folder, they have written on Javascript (NodeJS).
 
-#Access for checking Actions and Cloudant database:
+# Access for checking Actions and Cloudant database:
 
 Login: kozym@getnada.com
 Pass: AJ4xmzi62sH2GfW
 
-Actions + API URL: https://cloud.ibm.com/openwhisk/actions
+# URLS:
 
+Actions + API URL: https://cloud.ibm.com/openwhisk/actions
 Cloudant URL: https://673e54aa-45fc-4ca4-9df0-dd8326a3a6e4-bluemix.cloudant.com/dashboard.html#database/shortener/_all_docs
 
 ## License
