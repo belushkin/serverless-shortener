@@ -30,13 +30,7 @@ const guestbook = {
           type: 'GET',
           url: `${apiUrl}/search`,
           contentType: 'application/json; charset=utf-8',
-          data: JSON.stringify({
-              "query": {
-                  "selector": {
-                      "short": short
-                  }
-              }
-          }),
+          data: JSON.stringify({query:{selector:{short:short}}}),
           dataType: 'json',
       });
   }
