@@ -64,8 +64,10 @@ const guestbook = {
   }
 
     // move browser to found location
-    function moveToLocation(url) {
-        window.location.assign(url)
+    function moveToLocation(entry) {
+      console.log(entry);
+      console.log(entry.url);
+        //window.location.assign(url)
     }
 
     // retrieve entry by short hash and if found send browser to the found location
@@ -73,9 +75,12 @@ const guestbook = {
         $(document).on('click', '.short', function(e) {
             e.preventDefault();
             guestbook.search(
-                $(this).attr('href').trim()
+                $(this).text().trim()
             ).done(function(result) {
-                moveToLocation(result.url);
+                if (!result.entries) {
+                    return;
+                }
+                moveToLocation(result.entries.shift());
             }).error(function(error) {
                 console.log(error);
             });
